@@ -1,19 +1,13 @@
 def main():
-    user_id = 1
-    nome = "Mateus Keppke"
-    email = "mateus.keppke@gmail.com"
-    ativo = True
-    tags = ["admin", "bahia", "python"]
+    user_id = 1001
+    user_name = "Alice"
+    email = "alice@example.com"
+    conta_ativa = True
+    tags = {"admin", "user"}
+    perfil = criar_usuario(user_name, 30)
 
-    return {
-        "id": user_id,
-        "nome": nome,
-        "email": email,
-        "ativo": ativo,
-        "tags": tags
-    }
-
+def criar_usuario(nome: str, idade: int) -> dict:
+    return {"nome": nome, "idade": idade}
 
 if __name__ == "__main__":
-    usuario = main()
-    print(usuario)
+    main()
