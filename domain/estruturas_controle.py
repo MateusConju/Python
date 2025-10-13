@@ -16,7 +16,21 @@
 #     print(contador)
 #     contador -= 1
 
+# **Exercício: Classificador de Performance**
+
+# **Briefing:**
+
+# > "Você recebe uma lista de tempos de resposta de uma API (em ms). Classifique cada tempo como: 'Excelente' (<100ms), 'Bom' (100-300ms), 'Aceitável' (300-1000ms), 'Lento' (>1000ms)."
+# >
+
+# Esqueleto inicial:
 tempos_resposta = [50, 120, 450, 1200, 80, 950]
+
+# DESAFIO: Use for + if/elif/else para classificar
+# Saída esperada:
+# 50ms: Excelente
+# 120ms: Bom
+# ...
 
 for tempo in tempos_resposta:
     if tempo < 100:
