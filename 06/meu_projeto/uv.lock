@@ -1,0 +1,20 @@
+version = 1
+revision = 3
+requires-python = ">=3.14"
+
+[[package]]
+name = "djando"
+version = "0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/11/64/36c9a4721239c1eb89e8238c9415cbb6eeb499ae4e78940ccd12ff58f352/djando-0.2.tar.gz", hash = "sha256:4d34cdc12c56e5cc420ac397fcbfe8aa92beb4833a46edb2c2bbc654611babfd", size = 4802, upload-time = "2021-03-11T21:07:33.508Z" }
+
+[[package]]
+name = "meu-projeto"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "djando" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "djando", specifier = ">=0.2" }]
