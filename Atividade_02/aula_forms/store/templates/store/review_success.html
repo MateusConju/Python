@@ -1,0 +1,6 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Review enviada com sucesso!</h1>
+
+<a href="{% url 'review-list' %}">Ver reviews</a> |
+<a href="{% url 'review-create' %}">Criar outra review</a>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Lista de Reviews</h1>
+
+{% if reviews %}
+<ul>
+  {% for review in reviews %}
+  <li>
+    <strong>{{ review.game.name }}</strong> — Nota: {{ review.rating }}<br />
+    <em>{{ review.comment }}</em><br />
+    <small>Criado em: {{ review.created_at }}</small>
+  </li>
+  <hr />
+  {% endfor %}
+</ul>
+{% else %}
+<p>Nenhuma review cadastrada.</p>
+{% endif %}
+
+<br />
+<a href="{% url 'review-create' %}">Criar nova review</a>
+{% endblock %}

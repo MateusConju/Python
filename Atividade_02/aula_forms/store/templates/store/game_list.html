@@ -1,0 +1,28 @@
+{% extends "_base.html" %}
+{% block title %}Game List{% endblock %}
+{% block content %}
+<h1>Games Catalog</h1>
+
+{% if games %}
+    <table>
+        <tr>
+            <th>Jogo<th>
+            <th>Preço<th>
+            <th>Plataformas<th>
+            <th>Metascore<th>
+        </tr>
+        {% for game in games %}
+            <tr>
+                <th>{{game.name}}<th>
+                <th>{{game.price}}<th>
+                <th>{%for platform in game.platform.all%}{{platform.name}} {%endfor%}<th>
+                <th>{{game.score}}<th>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No games are currently listed.</p>
+{% endif %}
+
+<p><a href="{% url 'game-create' %}">Adicionar Novo Jogo!</a></p>
+{% endblock %}

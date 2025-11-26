@@ -1,0 +1,11 @@
+{% extends "_base.html" %}
+{% block title %}Game Form{% endblock %}
+{% block content %}
+<form method="post">
+    <p ><a href="{% url 'game-list' %}">Voltar</a></p>
+    <h1>Adicionar Jogo:</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar Jogo</button>
+</form>
+{% endblock %}
