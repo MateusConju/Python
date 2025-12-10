@@ -1,6 +1,5 @@
-def main():
-    print("Hello from 13!")
+from fastapi import APIRouter, status, Response
 
+router = APIRouter()
 
-if __name__ == "__main__":
-    main()
+@router.post("/", status.HTTP)
