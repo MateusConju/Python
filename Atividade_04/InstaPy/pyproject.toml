@@ -1,0 +1,24 @@
+[project]
+name = "instapy"
+version = "0.1.0"
+description = "Pipeline de processamento de mídia com FastAPI + Redis + RQ"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+
+    # Redis + RQ
+    "redis>=5.0.0",
+    "rq>=1.15.0",
+
+    # Upload de arquivos
+    "python-multipart>=0.0.9",
+
+    # Processamento de imagens
+    "pillow>=10.0.0",
+]
+
+[tool.uv]
+dev-dependencies = []
